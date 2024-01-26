@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		".editorconfig": "terraform",
+		"string": "cpp",
+		"typeinfo": "cpp"
+	}
+}
