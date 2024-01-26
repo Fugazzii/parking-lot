@@ -5,7 +5,9 @@ using namespace std;
 
 class Vehicle
 {
-public:
+protected:
 	string licenseNo;
-	void assignTicket();
+
+public:
+	virtual void assignTicket();
 };

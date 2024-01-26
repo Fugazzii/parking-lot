@@ -8,6 +8,10 @@ public:
 		this->licenseNo = licenseNo;
 	}
 
+	void assignTicket()
+	{
+	}
+
 	~Car()
 	{
 		cout << "Car deleted";
