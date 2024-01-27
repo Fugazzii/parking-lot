@@ -30,7 +30,8 @@ Pay ticket: To pay the parking fee at the exit panel via cash or a credit card
 Cash: To pay the parking fee via cash
 Credit card: To pay the parking fee via credit card
 Park vehicle: To park the vehicle at the assigned destination
-Parking agent
+
+### Parking agent
 Update account: To update account details and payment information
 Login/Logout: To log in/log out to/from the agent or admin account
 View account: To view account details like payment status or unpaid amount
