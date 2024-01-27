@@ -1,10 +1,4 @@
-export enum PaymentStatus {
-	COMPLETED, 
-	FAILED, 
-	PENDING, 
-	UNPAID, 
-	REFUNDED
-}
+import type { PaymentStatus } from "./payment-status.enum";
 
 export abstract class Payment {
 	public constructor(

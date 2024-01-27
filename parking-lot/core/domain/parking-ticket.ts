@@ -4,14 +4,16 @@ import { Entrance } from "./entrance";
 import { Exit } from "./exit";
 
 export class ParkingTicket {
-    private ticketNo: number;
-    private timestamp: Date;
-    private exit: Date;
-    private amount: number;
-    private status: boolean;
-
-    private vehicle: Vehicle;
-    private payment: Payment;
-    private entrance: Entrance;
-    private exitIns: Exit;    
+    public constructor(
+        private readonly ticketNo: number,
+        private readonly timestamp: Date,
+        private readonly exit: Date,
+        private readonly amount: number,
+        private readonly status: boolean,
+    
+        private readonly vehicle: Vehicle,
+        private readonly payment: Payment,
+        private readonly entrance: Entrance,
+        private readonly exitIns: Exit,        
+    ) {}
 }
