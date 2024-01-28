@@ -1,5 +1,5 @@
 export abstract class Vehicle {
 	public constructor(private readonly licenseNo: string) {}
 
-	protected abstract assignTicket();
+	protected abstract assignTicket(): void;
 }

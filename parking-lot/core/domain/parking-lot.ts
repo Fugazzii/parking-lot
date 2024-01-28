@@ -1,9 +1,12 @@
-import { Entrance } from "./entrance";
-import { Exit } from "./exit";
-import { ParkingRate } from "./parking-rate";
-import { ParkingTicket } from "./parking-ticket";
-import { Vehicle } from "./vehicle/vehicle";
-import { ParkingSpot } from "./parking-spot/parking-spot";
+/**
+ * Aggregate Root
+ */
+import { Entrance } from "./entities/entrance";
+import { Exit } from "./entities/exit";
+import { ParkingRate } from "./value-objects/parking-rate";
+import { ParkingTicket } from "./entities/parking-ticket";
+import { Vehicle } from "./entities/vehicle/vehicle";
+import type { ParkingSpot } from "./entities/parking-spot/parking-spot";
 
 export class ParkingLot {
     private readonly _entrance: Map<string, Entrance>;

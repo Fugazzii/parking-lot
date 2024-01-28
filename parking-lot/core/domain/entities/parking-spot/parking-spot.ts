@@ -1,4 +1,4 @@
-import { Vehicle } from "../vehicle/vehicle";
+import { Vehicle } from "../../entities/vehicle/vehicle";
 
 export abstract class ParkingSpot {
 	public constructor(

@@ -1,4 +1,4 @@
-import { ParkingSpot } from "./parking-spot/parking-spot";
+import type { ParkingSpot } from "./parking-spot/parking-spot";
 
 export class DisplayBoard {
 	private readonly _parkingSpots: Map<string, Array<ParkingSpot>>

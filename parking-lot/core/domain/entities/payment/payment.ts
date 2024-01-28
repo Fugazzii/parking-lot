@@ -1,4 +1,4 @@
-import type { PaymentStatus } from "./payment-status.enum";
+import type { PaymentStatus } from "../../value-objects/payment-status.enum";
 
 export abstract class Payment {
 	public constructor(

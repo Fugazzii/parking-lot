@@ -1,7 +1,7 @@
-import { AccountStatus } from "./account-status.enum";
-import { Person } from "./person";
+import { AccountStatus } from "../value-objects/account-status.enum";
+import { Person } from "../value-objects/person";
 
-export abstract class Account {
+export class Account {
 	public constructor(
 		protected readonly _username: string,
 		protected _password: string,
