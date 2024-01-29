@@ -4,5 +4,7 @@ export class ParkingRate {
 		private readonly rate: number	
 	) {}
   
-	public calculate(): void {}
+	public calculate(): number {
+		return this.hours * this.rate;
+	}
 }

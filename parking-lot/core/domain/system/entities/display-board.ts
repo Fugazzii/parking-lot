@@ -6,4 +6,5 @@ export class DisplayBoard {
 	public constructor(private readonly _id: number) {
 		this._parkingSpots = new Map();
 	}
+
 }

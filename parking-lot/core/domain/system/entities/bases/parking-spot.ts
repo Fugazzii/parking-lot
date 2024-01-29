@@ -1,10 +1,10 @@
-import type { Vehicle } from "@domain/customer/entities/vehicle/vehicle";
+import type { IVehicle } from "@domain/customer/entities/bases/vehicle";
 
 export interface IParkingSpot {
 	get id(): number,
 	get isFree(): boolean,
-	get vehicle(): Vehicle
+	get vehicle(): IVehicle
 	
-    assignVehicle(vehicle: Vehicle): boolean; 
+    assignVehicle(vehicle: IVehicle): boolean; 
     removeVehicle(): boolean;
 }
