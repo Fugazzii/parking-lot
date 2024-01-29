@@ -1,5 +1,5 @@
-import { AccountStatus } from "../value-objects/account-status.enum";
-import { Person } from "../value-objects/person";
+import { AccountStatus } from "../enums/account-status.enum";
+import { Person } from "./person";
 
 export class Account {
 	public constructor(

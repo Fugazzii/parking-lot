@@ -1,12 +1,12 @@
 /**
  * Aggregate Root
  */
-import { Entrance } from "./entities/entrance";
-import { Exit } from "./entities/exit";
-import { ParkingRate } from "./value-objects/parking-rate";
-import { ParkingTicket } from "./entities/parking-ticket";
-import { Vehicle } from "./entities/vehicle/vehicle";
-import type { ParkingSpot } from "./entities/parking-spot/parking-spot";
+import { Entrance } from "./system/entities/entrance";
+import { Exit } from "./system/entities/exit";
+import { ParkingRate } from "./parking-agent/value-objects/parking-rate";
+import { ParkingTicket } from "./system/entities/parking-ticket";
+import type { IParkingSpot } from "./system/entities/bases/parking-spot";
+import type { IVehicle } from "./customer/entities/bases/vehicle";
 
 export class ParkingLot {
     private readonly _entrance: Map<string, Entrance>;
@@ -45,11 +45,11 @@ export class ParkingLot {
 		    return false;
 	  }
 
-    public getParkingTicket(vehicle: Vehicle): ParkingTicket {
+    public getParkingTicket(vehicle: IVehicle): ParkingTicket {
         throw [];
 	  }
 
-    public isFull(type: ParkingSpot): boolean {
+    public isFull(type: IParkingSpot): boolean {
 	  	  return true
     }
 }

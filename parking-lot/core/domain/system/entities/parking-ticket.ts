@@ -1,7 +1,7 @@
-import { Vehicle } from "./vehicle/vehicle";
-import { Payment } from "./payment/payment";
-import { Entrance } from "./entrance";
-import { Exit } from "./exit";
+import type { Vehicle } from "@domain/customer/entities/vehicle/vehicle";
+import type { IPayment } from "./bases/payment";
+import type { Entrance } from "./entrance";
+import type { Exit } from "./exit";
 
 export class ParkingTicket {
     public constructor(
@@ -12,7 +12,7 @@ export class ParkingTicket {
         private readonly status: boolean,
     
         private readonly vehicle: Vehicle,
-        private readonly payment: Payment,
+        private readonly payment: IPayment,
         private readonly entrance: Entrance,
         private readonly exitIns: Exit,        
     ) {}

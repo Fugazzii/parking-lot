@@ -2,6 +2,9 @@
 	"files.associations": {
 		".editorconfig": "terraform",
 		"string": "cpp",
-		"typeinfo": "cpp"
-	}
+		"typeinfo": "cpp",
+		"vector": "cpp",
+		"unordered_map": "cpp"
+	},
+	"C_Cpp.errorSquiggles": "disabled"
 }
