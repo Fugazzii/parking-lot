@@ -1,12 +1,14 @@
 /**
  * Aggregate Root
  */
-import { Entrance } from "./system/entities/entrance";
-import { Exit } from "./system/entities/exit";
-import { ParkingRate } from "./parking-agent/value-objects/parking-rate";
-import { ParkingTicket } from "./system/entities/parking-ticket";
-import type { IParkingSpot } from "./system/entities/bases/parking-spot";
-import type { IVehicle } from "./customer/entities/bases/vehicle";
+import type { IVehicle } from "./contexts/customer/entities/bases/vehicle";
+import { ConflictException } from "./contexts/common";
+import type { IEntranceRepository } from "./ports/entrance.repository";
+import type { IParkingSpot } from "./contexts/system/entities/bases/parking-spot";
+import type { Entrance } from "./contexts/system/entities/entrance";
+import type { Exit } from "./contexts/system/entities/exit";
+import type { ParkingTicket } from "./contexts/system/entities/parking-ticket";
+import type { ParkingRate } from "./contexts/system/value-objects/parking-rate";
 
 export class ParkingLot {
     private readonly _entrance: Map<string, Entrance>;
@@ -19,7 +21,9 @@ export class ParkingLot {
       private id: number,
       private name: string,
       private address: string,
-      private parkingRate: ParkingRate  
+      private parkingRate: ParkingRate
+      // private readonly entranceRepository: IEntranceRepository,
+      // private readonyl exitRepository: 
     ) {
       this._entrance    = new Map();
       this._exit        = new Map();
@@ -38,12 +42,18 @@ export class ParkingLot {
         return ParkingLot.parkingLot;
     }
 
-    public addEntrance(entrance: Entrance): boolean {
-	  	  return false;
+    public addEntrance(id: string, entrance: Entrance): void {
+        if(!!this._entrance.get(id)) {
+          throw new ConflictException("Id already exists");
+        }
+        this._entrance.set(id, entrance);
 	  }
-    public addExit(exit: Exit): boolean {
-		    return false;
-	  }
+    public addExit(id: string, exit: Exit): void {
+      if(!!this._exit.get(id)) {
+        throw new ConflictException("Id already exists");
+      }
+      this._exit.set(id, exit);
+    }
 
     public getParkingTicket(vehicle: IVehicle): ParkingTicket {
         throw [];

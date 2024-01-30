@@ -1,4 +1,4 @@
-import type { IVehicle } from "@domain/customer/entities/bases/vehicle";
+import type { IVehicle } from "@domain/contexts/customer/entities/bases/vehicle";
 
 export interface IParkingSpot {
 	get id(): number,

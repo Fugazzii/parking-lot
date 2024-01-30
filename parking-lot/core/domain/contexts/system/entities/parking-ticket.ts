@@ -1,4 +1,4 @@
-import type { Vehicle } from "@domain/customer/entities/vehicle/vehicle";
+import type { IVehicle } from "@domain/contexts/customer/entities/bases/vehicle";
 import type { IPayment } from "./bases/payment";
 import type { Entrance } from "./entrance";
 import type { Exit } from "./exit";
@@ -11,7 +11,7 @@ export class ParkingTicket {
         private readonly amount: number,
         private readonly status: boolean,
     
-        private readonly vehicle: Vehicle,
+        private readonly vehicle: IVehicle,
         private readonly payment: IPayment,
         private readonly entrance: Entrance,
         private readonly exitIns: Exit,        

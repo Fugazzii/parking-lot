@@ -1,5 +1,5 @@
-import type { AccountStatus } from "@domain/common/enums/account-status.enum";
-import type { Person } from "@domain/common/value-objects/person";
+import type { AccountStatus } from "@domain/contexts/common/enums/account-status.enum";
+import type { Person } from "@domain/contexts/common/value-objects/person";
 import { InvalidPasswordException } from "../errors/invalid-password";
 
 export class Admin {
